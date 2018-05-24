@@ -49,6 +49,7 @@ const KonchatNotification = {
 					n.onclick = function() {
 						this.close();
 						window.focus();
+						parent.focus();
 						switch (notification.payload.type) {
 							case 'd':
 								return FlowRouter.go('direct', { username: notification.payload.sender.username }, FlowRouter.current().queryParams);
